@@ -17,6 +17,9 @@ import re
 from haystack.pipelines import QuestionGenerationPipeline,RetrieverQuestionGenerationPipeline,QuestionAnswerGenerationPipeline
 from haystack.nodes import QuestionGenerator
 import openai
+import nltk
+
+nltk.download('punkt')
 
 document_store = InMemoryDocumentStore(use_bm25=True)
 documents=[]
